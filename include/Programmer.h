@@ -4,17 +4,17 @@
 class Programmer : public Human
 {
 private:
-    std::string work_;
+    int incrementPercentage_ = 10;
     std::string projectName_;
+    double salary_ = 40000;
+    std::string work_;
+    double increseSalaryBasedOnExpirience(int yearsOfExperience_);
 
 public:
-    Programmer(std::string name, std::string projectName) : projectName_(projectName)
-    {
-        this->setName(name);
-    }
+    Programmer(std::string name, std::string projectName);
     std::string getName();
-    void setName(std::string name);
     std::string getProjectName();
+    double getSalary();
     void setProjectName(std::string projectName);
     std::string work();
 };
